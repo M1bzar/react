@@ -6,8 +6,8 @@ import { Ionicons } from "@expo/vector-icons";
 const HomeUser = () => {
   const navigation = useNavigation();
 
-  const handlePesoMexicanoBanortePress = () => {
-    navigation.navigate("PesoMexicanoBanorteScreen");
+  const handlePesoMexicanoAztecaPress = () => {
+    navigation.navigate("BancoAzteca");
   };
 
   const handlePesoMexicanoBancoPress = () => {
@@ -62,8 +62,8 @@ const HomeUser = () => {
     <ImageBackground source={require("../img/images.jpg")} style={styles.backgroundImage}>
 
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.button2} onPress={handlePesoMexicanoBanortePress}>
-          <Text style={styles.buttonText}>Peso Mexicano Banorte</Text>
+        <TouchableOpacity style={styles.button2} onPress={handlePesoMexicanoAztecaPress}>
+          <Text style={styles.buttonText}>Peso Mexicano banorte</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button2} onPress={handlePesoMexicanoBancoPress}>
           <Text style={styles.buttonText}>Peso Mexicano Banco</Text>

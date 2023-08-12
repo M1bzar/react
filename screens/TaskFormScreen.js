@@ -31,9 +31,28 @@ const DataDisplayScreen = () => {
       item.periodUnit.getFullYear() <= 2013
   );
 
-  const lineChartData2012To2023 = chartData.filter(
+  const lineChartData2020To2023 = chartData.filter(
     (item) =>
-      item.periodUnit.getFullYear() >= 2012 &&
+      item.periodUnit.getFullYear() >= 2020 &&
+      item.periodUnit.getFullYear() <= 2023
+  );
+
+  const lineChartData2006To2008 = chartData.filter(
+    (item) =>
+      item.periodUnit.getFullYear() >= 2006 &&
+      item.periodUnit.getFullYear() <= 2008
+  );
+
+  
+  const lineChartData2018To2020 = chartData.filter(
+    (item) =>
+      item.periodUnit.getFullYear() >= 2018 &&
+      item.periodUnit.getFullYear() <= 2020
+  );
+
+  const lineChartData2023To2023 = chartData.filter(
+    (item) =>
+      item.periodUnit.getFullYear() >= 2023 &&
       item.periodUnit.getFullYear() <= 2023
   );
 
@@ -53,13 +72,39 @@ const DataDisplayScreen = () => {
     (item) => item.mexicanPeso
   );
 
-  const lineChartLabels2012To2023 = lineChartData2012To2023.map(
+  const lineChartLabels2020To2023 = lineChartData2020To2023.map(
     (item) => item.periodUnit
   );
 
-  const lineChartValues2012To2023 = lineChartData2012To2023.map(
+  const lineChartValues2020To2023 = lineChartData2020To2023.map(
     (item) => item.mexicanPeso
   );
+
+  const lineChartLabels2006To2008 = lineChartData2006To2008.map(
+    (item) => item.periodUnit
+  );
+
+  const lineChartValues2006To2008 = lineChartData2006To2008.map(
+    (item) => item.mexicanPeso
+  );
+
+  const lineChartLabels2018To2020 = lineChartData2018To2020.map(
+    (item) => item.periodUnit
+  );
+
+  const lineChartValues2018To2020 = lineChartData2018To2020.map(
+    (item) => item.mexicanPeso
+  );
+
+  const lineChartLabels2023To2023 = lineChartData2023To2023.map(
+    (item) => item.periodUnit
+  );
+
+  const lineChartValues2023To2023 = lineChartData2023To2023.map(
+    (item) => item.mexicanPeso
+  );
+
+
 
 
 
@@ -106,6 +151,25 @@ const DataDisplayScreen = () => {
       </View>
 
       <View style={styles.chartContainer}>
+        <Text style={styles.chartTitle}>Gráfico de Línea (2006-2008)</Text>
+        <LineChart
+          data={{
+            labels: lineChartLabels2006To2008,
+            datasets: [{ data: lineChartValues2006To2008 }],
+          }}
+          width={500}
+          height={350}
+          yAxisLabel="$"
+          chartConfig={{
+            backgroundGradientFrom: "#f0f0f0",
+            backgroundGradientTo: "#f0f0f0",
+            decimalPlaces: 2,
+            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+          }}
+        />
+      </View>
+
+      <View style={styles.chartContainer}>
         <Text style={styles.chartTitle}>Gráfico de Línea (2008-2013)</Text>
         <LineChart
           data={{
@@ -125,11 +189,11 @@ const DataDisplayScreen = () => {
       </View>
 
       <View style={styles.chartContainer}>
-        <Text style={styles.chartTitle}>Gráfico de Línea (2012-2023)</Text>
+        <Text style={styles.chartTitle}>Gráfico de Línea (2018-2020)</Text>
         <LineChart
           data={{
-            labels: lineChartLabels2012To2023,
-            datasets: [{ data: lineChartValues2012To2023 }],
+            labels: lineChartLabels2018To2020,
+            datasets: [{ data: lineChartValues2018To2020 }],
           }}
           width={500}
           height={350}
@@ -143,30 +207,44 @@ const DataDisplayScreen = () => {
         />
       </View>
 
+      <View style={styles.chartContainer}>
+        <Text style={styles.chartTitle}>Gráfico de Línea (2020-2023)</Text>
+        <LineChart
+          data={{
+            labels: lineChartLabels2020To2023,
+            datasets: [{ data: lineChartValues2020To2023 }],
+          }}
+          width={500}
+          height={350}
+          yAxisLabel="$"
+          chartConfig={{
+            backgroundGradientFrom: "#f0f0f0",
+            backgroundGradientTo: "#f0f0f0",
+            decimalPlaces: 2,
+            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+          }}
+        />
+      </View>
 
       <View style={styles.chartContainer}>
-        <Text style={styles.chartTitle}>Gráfico de Líneas de Valores</Text>
-          <LineChart
-            data={{
-              labels: chartLabels,
-              datasets: [{ data: chartValues }],
-            }}
-            width={500}
-            height={350}
-            yAxisLabel="$"
-            chartConfig={{
-              backgroundGradientFrom: "#f0f0f0",
-              backgroundGradientTo: "#f0f0f0",
-              decimalPlaces: 2,
-              color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-            }}
-            withInnerLines={false}
-            withVerticalLabels={false}
-            withHorizontalLabels={true}
-            withOuterLines={true}
-            bezier
-          />
-        </View>
+        <Text style={styles.chartTitle}>Gráfico de Línea (2023 Present)</Text>
+        <LineChart
+          data={{
+            labels: lineChartLabels2023To2023,
+            datasets: [{ data: lineChartValues2023To2023 }],
+          }}
+          width={500}
+          height={350}
+          yAxisLabel="$"
+          chartConfig={{
+            backgroundGradientFrom: "#f0f0f0",
+            backgroundGradientTo: "#f0f0f0",
+            decimalPlaces: 2,
+            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+          }}
+        />
+      </View>
+      
     </View>
   );
 };

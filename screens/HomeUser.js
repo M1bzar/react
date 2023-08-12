@@ -25,6 +25,20 @@ const HomeUser = () => {
   const handleDatosOwnApiPress2 = () => {
     navigation.navigate("DatosApi2");
   };
+  const handleDatosOwnApiPress3 = () => {
+    navigation.navigate("DatosApi3");
+  };
+
+  const handleDatosOwnApiPress4 = () => {
+    navigation.navigate("DatosApi4");
+  };
+  const handleDatosOwnApiPress5 = () => {
+    navigation.navigate("DatosApi5");
+  };
+
+  const handleDatosOwnApiPress6 = () => {
+    navigation.navigate("DatosApi6");
+  };
 
   const handleUserButtonPress = () => {
     navigation.navigate("HomeUser");
@@ -62,6 +76,18 @@ const HomeUser = () => {
         </TouchableOpacity>
         <TouchableOpacity style={styles.button2} onPress={handleDatosOwnApiPress2}>
           <Text style={styles.buttonText}>Mexican Peso VS Australian dollar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button2} onPress={handleDatosOwnApiPress3}>
+          <Text style={styles.buttonText}>Mexican Peso VS Canadian dollar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button2} onPress={handleDatosOwnApiPress4}>
+          <Text style={styles.buttonText}>Mexican Peso VS UK pound sterling</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button2} onPress={handleDatosOwnApiPress5}>
+          <Text style={styles.buttonText}>Mexican Peso VS UK Japanese yen</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button2} onPress={handleDatosOwnApiPress6}>
+          <Text style={styles.buttonText}>Mexican Peso VS UK Turkish lira</Text>
         </TouchableOpacity>
       </View>
 

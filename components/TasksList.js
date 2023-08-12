@@ -42,21 +42,10 @@ const TasksList = ({ navigation }) => {
   );
 
   return (
-    <SafeAreaView style={{ flex: 1, width: "90%" }}>
-      <FlatList
-        data={tasks}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
-        refreshControl={
-          <RefreshControl
-            refreshing={refreshing}
-            onRefresh={onRefresh}
-            colors={["#78e08f"]}
-            progressBackgroundColor="#0a3d62"
-          />
-        }
-      />
-    </SafeAreaView>
+    
+    <View style={styles.chartContainer}>
+    <Text style={styles.chartTitle}>Gráfico de Líneas de Valores</Text>
+    </View>
   );
 };
 

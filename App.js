@@ -5,6 +5,9 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 import HomeScreen from "./screens/HomeScreen";
 import TaskFormScreen from "./screens/TaskFormScreen";
+import HomeUser from "./screens/HomeUser";
+import DatosApi from "./screens/DatosApi";
+import DatosApi2 from "./screens/DatosApi2";
 
 const Stack = createStackNavigator();
 
@@ -16,7 +19,7 @@ const App = () => {
           name="HomeScreen"
           component={HomeScreen}
           options={({ navigation }) => ({
-            title: "Tasks App",
+            title: "Comparation Coin",
             headerStyle: {
               backgroundColor: "#222f3e",
             },
@@ -27,9 +30,6 @@ const App = () => {
               <TouchableOpacity
                 onPress={() => navigation.navigate("TaskFormScreen")}
               >
-                <Text style={{ color: "#fff", marginRight: 20, fontSize: 15 }}>
-                  New
-                </Text>
               </TouchableOpacity>
             ),
           })}
@@ -38,7 +38,7 @@ const App = () => {
           name="TaskFormScreen"
           component={TaskFormScreen}
           options={{
-            title: 'Create a Task',
+            title: 'Grafict',
             headerStyle: {
               backgroundColor: "#222f3e",
             },
@@ -49,7 +49,58 @@ const App = () => {
             },
           }}
         />
+
+        <Stack.Screen
+          name="HomeUser"
+          component={HomeUser}
+          options={{
+            title: 'Grafict',
+            headerStyle: {
+              backgroundColor: "#222f3e",
+            },
+            headerTintColor: "#fff",
+
+            headerTitleStyle: {
+              color: "#ffffff",
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="DatosApi"
+          component={DatosApi}
+          options={{
+            title: 'Datos',
+            headerStyle: {
+              backgroundColor: "#222f3e",
+            },
+            headerTintColor: "#fff",
+
+            headerTitleStyle: {
+              color: "#ffffff",
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="DatosApi2"
+          component={DatosApi2}
+          options={{
+            title: 'Datos',
+            headerStyle: {
+              backgroundColor: "#222f3e",
+            },
+            headerTintColor: "#fff",
+
+            headerTitleStyle: {
+              color: "#ffffff",
+            },
+          }}
+        />
+
+
       </Stack.Navigator>
+
     </NavigationContainer>
   );
 };

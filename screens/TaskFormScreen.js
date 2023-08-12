@@ -61,20 +61,10 @@ const DataDisplayScreen = () => {
     (item) => item.mexicanPeso
   );
 
-  
+
 
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Data Display</Text>
-      {/* Render JSON data rows */}
-      {jsonData.map((item, index) => (
-        Object.keys(item).length > 0 && (
-          <View key={index} style={styles.dataRow}>
-            <Text>Period Unit: {item.PeriodUnit}</Text>
-            <Text>Mexican Peso: {item["Mexican peso"]}</Text>
-          </View>
-        )
-      ))}
       {/* Bar Chart */}
       <View style={styles.chartContainer}>
         <Text style={styles.chartTitle}>Gráfico de Barras</Text>
@@ -153,32 +143,30 @@ const DataDisplayScreen = () => {
         />
       </View>
 
-   
+
       <View style={styles.chartContainer}>
         <Text style={styles.chartTitle}>Gráfico de Líneas de Valores</Text>
-        <LineChart
-          data={{
-            labels: chartLabels,
-            datasets: [{ data: chartValues }],
-          }}
-          width={500}
-          height={350}
-          yAxisLabel="$"
-          chartConfig={{
-            backgroundGradientFrom: "#f0f0f0",
-            backgroundGradientTo: "#f0f0f0",
-            decimalPlaces: 2,
-            color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-          }}
-          withInnerLines={false} // To hide inner horizontal lines
-          withVerticalLabels={false} // To hide vertical labels
-          withHorizontalLabels={true} // Show horizontal labels (dates)
-          withOuterLines={true} // Show outer lines
-          bezier // Use smooth line interpolation
-        />
-      </View>
-    
-
+          <LineChart
+            data={{
+              labels: chartLabels,
+              datasets: [{ data: chartValues }],
+            }}
+            width={500}
+            height={350}
+            yAxisLabel="$"
+            chartConfig={{
+              backgroundGradientFrom: "#f0f0f0",
+              backgroundGradientTo: "#f0f0f0",
+              decimalPlaces: 2,
+              color: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
+            }}
+            withInnerLines={false}
+            withVerticalLabels={false}
+            withHorizontalLabels={true}
+            withOuterLines={true}
+            bezier
+          />
+        </View>
     </View>
   );
 };
@@ -188,6 +176,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    width: "100%",
+    alignContent: "center",
+    justifyContent: "center",
   },
   heading: {
     fontSize: 18,
@@ -202,7 +193,9 @@ const styles = StyleSheet.create({
   },
   chartContainer: {
     marginTop: 20,
-  },chartTitle: {
+    alignContent: "center",
+    justifyContent: "center",
+  }, chartTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',

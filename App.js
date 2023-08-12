@@ -12,6 +12,7 @@ import DatosApi3 from "./screens/DatosApi3";
 import DatosApi4 from "./screens/DatosApi4";
 import DatosApi5 from "./screens/DatosApi5";
 import DatosApi6 from "./screens/DatosApi6";
+import BancoAzteca from "./screens/BancoAzteca";
 
 const Stack = createStackNavigator();
 
@@ -23,7 +24,7 @@ const App = () => {
           name="HomeScreen"
           component={HomeScreen}
           options={({ navigation }) => ({
-            title: "Comparation Coin",
+            title: "MXN-Dollar Watcher",
             headerStyle: {
               backgroundColor: "#222f3e",
             },
@@ -42,7 +43,7 @@ const App = () => {
           name="TaskFormScreen"
           component={TaskFormScreen}
           options={{
-            title: 'Grafict',
+            title: 'MXN-Dollar Watcher -> Graficts',
             headerStyle: {
               backgroundColor: "#222f3e",
             },
@@ -58,7 +59,7 @@ const App = () => {
           name="HomeUser"
           component={HomeUser}
           options={{
-            title: 'Grafict',
+            title: 'MXN-Dollar Watcher',
             headerStyle: {
               backgroundColor: "#222f3e",
             },
@@ -154,6 +155,22 @@ const App = () => {
         <Stack.Screen
           name="DatosApi6"
           component={DatosApi6}
+          options={{
+            title: 'Datos',
+            headerStyle: {
+              backgroundColor: "#222f3e",
+            },
+            headerTintColor: "#fff",
+
+            headerTitleStyle: {
+              color: "#ffffff",
+            },
+          }}
+        />
+
+        <Stack.Screen
+          name="BancoAzteca"
+          component={BancoAzteca}
           options={{
             title: 'Datos',
             headerStyle: {

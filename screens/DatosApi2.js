@@ -15,7 +15,7 @@ const DatosApi2 = ({ navigation }) => { // Pass the navigation prop
     return (
         <View style={styles.container}>
 
-            <Text style={styles.heading}>Data Display</Text>
+            <Text style={styles.heading}>Mexican Peso VS Australian dollar Comparing with USA dollar</Text>
             {/* Render JSON data rows */}
             {jsonData.map((item, index) => (
                 Object.keys(item).length > 0 && (

@@ -12,7 +12,6 @@ import DatosApi3 from "./screens/DatosApi3";
 import DatosApi4 from "./screens/DatosApi4";
 import DatosApi5 from "./screens/DatosApi5";
 import DatosApi6 from "./screens/DatosApi6";
-import BancoAzteca from "./screens/BancoAzteca";
 
 const Stack = createStackNavigator();
 
@@ -168,21 +167,6 @@ const App = () => {
           }}
         />
 
-        <Stack.Screen
-          name="BancoAzteca"
-          component={BancoAzteca}
-          options={{
-            title: 'Datos',
-            headerStyle: {
-              backgroundColor: "#222f3e",
-            },
-            headerTintColor: "#fff",
-
-            headerTitleStyle: {
-              color: "#ffffff",
-            },
-          }}
-        />
 
 
       </Stack.Navigator>

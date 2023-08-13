@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { BarChart, LineChart, ScatterChart } from "react-native-chart-kit";
 
-import data from "/csv.json"; // Assuming the data file is in the same directory
+import data from "../Datos/csv.json"; // Assuming the data file is in the same directory
 
 const DataDisplayScreen = () => {
   const [jsonData, setJsonData] = useState([]);

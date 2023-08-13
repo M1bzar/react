@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { BarChart, LineChart, ScatterChart } from "react-native-chart-kit";
-import data from "/csv.json"; // Assuming the data file is in the same directory
+import data from "../Datos/csv.json"; // Assuming the data file is in the same directory
 
 const DatosApi5 = ({ navigation }) => { // Pass the navigation prop
 

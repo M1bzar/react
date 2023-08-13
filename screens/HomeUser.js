@@ -62,12 +62,7 @@ const HomeUser = () => {
     <ImageBackground source={require("../img/images.jpg")} style={styles.backgroundImage}>
 
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.button2} onPress={handlePesoMexicanoAztecaPress}>
-          <Text style={styles.buttonText}>Peso Mexicano banorte</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button2} onPress={handlePesoMexicanoBancoPress}>
-          <Text style={styles.buttonText}>Peso Mexicano Banco</Text>
-        </TouchableOpacity>
+    
         <TouchableOpacity style={styles.button2} onPress={handleGraficasPress}>
           <Text style={styles.buttonText}>Gráficas de valores peso Mexicano</Text>
         </TouchableOpacity>

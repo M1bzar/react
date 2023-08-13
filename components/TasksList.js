@@ -40,6 +40,7 @@ const TasksList = ({ navigation }) => {
   const renderItem = ({ item }) => (
     <TaskItem task={item} handleDelete={handleDelete} />
   );
+  
 
   return (
     
